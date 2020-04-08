@@ -487,11 +487,11 @@ int main(int argc, char* argv[]) {
 
 	// Insert number of cores to use
 	do {
-		cout << "Favor, ingrese la cantidad de nucleos a usar (Max.: " << omp_get_max_threads() << "):" << endl;
+		cout << "Ingrese la cantidad de nucleos a usar (Max.: " << omp_get_max_threads() << "):" << endl;
 		cin >> optionAux;
 		option = atoi(optionAux.c_str());
 		if (option>omp_get_max_threads()) {
-			cout << "Valor mayor a la cantidad de nucleos disponibles" << endl;
+			cout << "La cantidad de nucleos ingresada es mayor a la disponible" << endl;
 		}
 	} while (option>omp_get_max_threads());
 
